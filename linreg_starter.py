@@ -1,17 +1,17 @@
-import os 
-os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
-import time 
-
 import tensorflow as tf
 import numpy as np
-import matplotlib.pyplot as plt
-import utils
+import os
+os.environ['TF_MIN_LOG_CPP'] = '2' # ??
+import time
 
-DATA_FILE = 'data/birth_life_2010.txt'
+# read data
 
-data, n_samples = utils.read_birth_life_data(DATA_FILE)
+# create placeholders
+X = tf.placeholder()
 
-print data.shape
-print data
-print n_samples
+# create variables
+w = tf.get_variable(tf.float32, tf.constant(0))
+b = tf.get_variable(tf.float32, tf.constant(0))
+
+
 
