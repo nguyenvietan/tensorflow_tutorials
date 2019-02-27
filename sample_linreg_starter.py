@@ -53,7 +53,6 @@ with tf.Session() as sess:
 		for x, y in data:
 			# Session execute optimizer and fetch values of loss
 			_, l = sess.run([optimizer, loss], feed_dict={X: x, Y:y}) 
-			# print '>>', _, l
 			total_loss += l
 		print('Epoch {0}: {1}'.format(i, total_loss/n_samples))
 
