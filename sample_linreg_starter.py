@@ -1,5 +1,3 @@
-
-
 """ Solution for simple linear regression example using placeholders
 Created by Chip Huyen (chiphuyen@cs.stanford.edu)
 CS20: "TensorFlow for Deep Learning Research"
