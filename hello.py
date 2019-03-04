@@ -3,7 +3,18 @@ import os
 os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
 import tensorflow as tf
 
+x = tf.constant([[1, 2, 3], [3, 3, 3]], name='x', dtype=tf.float32)
+op1 = tf.reduce_sum(x, 0)
+op2 = tf.reduce_sum(x, 1)
 
+with tf.Session() as sess:
+	print sess.run(op1)
+	print sess.run(op2)
+
+
+
+
+"""
 a = tf.placeholder(tf.float32)
 b = tf.constant(10, tf.float32)
 list_vals = [1, 2, 3, 4, 5]
@@ -12,7 +23,7 @@ c = a + b
 with tf.Session() as sess:
 	for i in list_vals:
 		print sess.run(c, feed_dict={a: i})
-	
+"""	
 
 """
 a = tf.placeholder(tf.float32, shape=[3])
